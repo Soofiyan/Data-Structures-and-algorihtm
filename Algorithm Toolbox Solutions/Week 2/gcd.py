@@ -7,12 +7,13 @@ def gcd_naive(a, b):
         a = b
         b = temp
     current_gcd = 1
-    for d in range(2, min(a, b) + 1):
-        if a % d == 0 and b % d == 0:
-            if d > current_gcd:
-                current_gcd = d
-
-    return current_gcd
+    while b != 0:
+        temp = b
+        b = a%b
+        a = temp
+        if(a==0):
+            a = 1
+    return a
 
 
 a, b = map(int, input().split())

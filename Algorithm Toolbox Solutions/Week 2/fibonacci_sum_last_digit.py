@@ -10,7 +10,7 @@ def fibonacci_sum_naive(n):
     sum      = 1
 
     for _ in range(n - 1):
-        previous, current = current, previous + current
+        previous, current = current%10, (previous + current)%10
         sum += current
 
     return (sum%10)

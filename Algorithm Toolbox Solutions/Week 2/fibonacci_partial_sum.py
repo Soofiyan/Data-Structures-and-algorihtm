@@ -10,8 +10,7 @@ def fibonacci_partial_sum_naive(from_, to):
     for i in range(to + 1):
         if i >= from_:
             sum = sum + current
-
-        current, next = next, current + next
+            current, next = next%10, (current + next)%10
 
     return sum % 10
 

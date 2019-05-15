@@ -10,10 +10,8 @@ def get_fibonacci_huge_naive(n, m):
 
     for _ in range(n - 1):
         previous, current = current, previous + current
-
     return current % m
 
-if __name__ == '__main__':
-    input = sys.stdin.read();
-    n, m = map(int, input.split())
-    print(get_fibonacci_huge_naive(n, m))
+
+n, m = map(int, input().split())
+print(get_fibonacci_huge_naive(n, m))
